@@ -23,7 +23,7 @@ func main() {
 
 	// this blocks forever, until the server
 	// has an unrecoverable error
-	fmt.Println("server started on ", addr)
+	fmt.Println("server started on port", addr)
 	err := srv.ListenAndServe()
 	log.Fatal(err)
 }
@@ -35,7 +35,7 @@ func handlePage(w http.ResponseWriter, r *http.Request) {
 	const page = `<html>
 <head></head>
 <body>
-	<p> Hello from Docker! I'm a Go server. </p>
+	<p> Hi Docker, I pushed a new version! </p>
 </body>
 </html>
 `
